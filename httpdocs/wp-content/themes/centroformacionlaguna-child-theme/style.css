@@ -19,12 +19,12 @@ Tags: education, e-learning, courses
    CENTROFORMACIONLAGUNA BRAND COLORS - VARIABLES CSS
    ============================================================ */
 :root {
-    --color-primary:        #022157;   /* Granate principal */
-    --color-primary-dark:   #01163b;   /* Granate oscuro hover */
-    --color-primary-light:  #033385;   /* Granate claro */
-    --color-secondary:      #ffa001;   /* Dorado/Naranja corporativo */
-    --color-secondary-dark: #d68600;   /* Dorado oscuro hover */
-    --color-secondary-light:#ffb833;   /* Dorado claro */
+    --color-primary:        #8B1A1A;   /* Granate principal */
+    --color-primary-dark:   #6F1515;   /* Granate oscuro hover */
+    --color-primary-light:  #A82424;   /* Granate claro */
+    --color-secondary:      #D4880A;   /* Dorado principal */
+    --color-secondary-dark: #B27208;   /* Dorado oscuro hover */
+    --color-secondary-light:#F5A623;   /* Dorado claro */
     --color-accent:         #C0392B;   /* Rojo acento */
     --color-text:           #2C2C2C;   /* Texto principal */
     --color-text-light:     #666666;   /* Texto secundario */
