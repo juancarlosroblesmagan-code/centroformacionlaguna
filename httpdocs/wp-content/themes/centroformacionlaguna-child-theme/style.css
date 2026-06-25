@@ -117,6 +117,18 @@ header.header,
     background-color: var(--color-bg) !important;
     border-bottom: 3px solid var(--color-secondary) !important;
     box-shadow: 0 2px 15px rgba(2,33,87,0.08) !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    min-height: auto !important;
+}
+
+#header .width-logo img,
+.site-header .width-logo img,
+.thim-logo img,
+#header img {
+    max-height: 50px !important;
+    width: auto !important;
+    transition: all 0.3s ease !important;
 }
 
 /* Menú de navegación - enlaces */
@@ -1663,10 +1675,19 @@ html body.home .elementor-element-9b44d64 h2,
 html body.home .elementor-element-0496812 h2,
 html body.home .elementor-element-4a438eb h2 {
     color: #ffffff !important;
-    font-size: 18px !important;
-    font-weight: 600 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
     margin: 0 !important;
     letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+html body.home .elementor-element-9b44d64 h2 i,
+html body.home .elementor-element-0496812 h2 i,
+html body.home .elementor-element-4a438eb h2 i {
+    font-size: 16px !important;
 }
 
 /* Button 1: Explorar programas (Solid Orange/Yellow) */
@@ -1703,7 +1724,26 @@ html body.home .elementor-element-c2f467e a.elementor-button:hover {
     transform: translateY(-2px) !important;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments and Narrow Header overrides */
+@media (min-width: 1025px) {
+    #header .nav > li > a,
+    .site-header .nav > li > a,
+    .thim-ekits-menu__nav > li > a,
+    #header .thim-ekits-menu__nav > li > a {
+        height: 60px !important;
+        line-height: 60px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    #header .nav > li.menu-item-16720 > a,
+    .thim-ekits-menu__nav > li.menu-item-16720 > a {
+        margin-top: 12px !important; /* Centrar el botón de contacto */
+        height: auto !important;
+        line-height: normal !important;
+    }
+}
+
 @media (max-width: 768px) {
     html body.home .elementor-element-283b33f h1 {
         font-size: 42px !important;
@@ -1712,3 +1752,4 @@ html body.home .elementor-element-c2f467e a.elementor-button:hover {
         font-size: 16px !important;
     }
 }
+
