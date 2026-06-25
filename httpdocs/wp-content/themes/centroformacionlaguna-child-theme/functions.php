@@ -45,6 +45,14 @@ function centroformacionlaguna_child_enqueue_styles() {
         null
     );
 
+    // FontAwesome 4.7.0 CDN for hero feature badges and classic icons
+    wp_enqueue_style(
+        'font-awesome-4-cdn',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+        array(),
+        '4.7.0'
+    );
+
     // JS personalizado
     wp_enqueue_script(
         'centroformacionlaguna-custom-js',
@@ -1415,6 +1423,6 @@ function elementor_template_shortcode( $atts ) {
 }
 add_shortcode( 'elementor-template', 'elementor_template_shortcode' );
 add_action( 'init', function() {
-    add_filter( 'widget_text', 'do_shortcode' );
-    add_filter( 'widget_text_content', 'do_shortcode' );
+    add_filter( 'widget_text', 'do_shortcode', 99 );
+    add_filter( 'widget_text_content', 'do_shortcode', 99 );
 }, 99 );

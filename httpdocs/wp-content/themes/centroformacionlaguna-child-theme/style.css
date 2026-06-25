@@ -12,6 +12,9 @@ Text Domain:  centroformacionlaguna-child
 Tags: education, e-learning, courses
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 /* ============================================================
    CENTROFORMACIONLAGUNA BRAND COLORS - VARIABLES CSS
    ============================================================ */
@@ -44,7 +47,18 @@ Tags: education, e-learning, courses
 /* ============================================================
    TIPOGRAFÍA
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+
+/* ---------- CORRECCIÓN DE ICONOS DE BARRA SUPERIOR (THIM EKITS FONTS PATH FIJO) ---------- */
+@font-face {
+    font-family: 'thim-ekits';
+    src: url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.woff2') format('woff2'),
+         url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.woff') format('woff'),
+         url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
 body {
     font-family: var(--font-body);
@@ -1666,7 +1680,7 @@ html body.home .elementor-element-3196994 {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    background: rgba(139, 26, 26, 0.45) !important; /* Semi-transparent corporate granate */
+    background: rgba(139, 26, 26, 0.85) !important; /* Semi-solid premium corporate granate to prevent color bleeding */
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(212, 136, 10, 0.35) !important; /* Fine gold border */
@@ -1681,7 +1695,7 @@ html body.home .elementor-element-3196994 {
 html body.home .elementor-element-ed1f6b4:hover,
 html body.home .elementor-element-17a8a0f:hover,
 html body.home .elementor-element-3196994:hover {
-    background: rgba(139, 26, 26, 0.65) !important;
+    background: rgba(139, 26, 26, 0.95) !important;
     border-color: rgba(212, 136, 10, 0.6) !important;
     transform: translateY(-3px) !important;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
@@ -1707,8 +1721,10 @@ html body.home .elementor-element-3196994 h2 {
 html body.home .elementor-element-ed1f6b4 h2 i,
 html body.home .elementor-element-17a8a0f h2 i,
 html body.home .elementor-element-3196994 h2 i {
-    font-size: 16px !important;
+    font-size: 18px !important;
     color: #ffa001 !important;
+    margin-right: 10px !important;
+    vertical-align: middle !important;
 }
 
 /* Responsive stacking for bottom features */
