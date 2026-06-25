@@ -1398,6 +1398,23 @@ function centroformacionlaguna_display_course_details() {
     echo '</div>';
 }
 
-
-
-
+// ============================================================
+// 12. ELEMENTOR TEMPLATE SHORTCODE (Render by ID)
+// ============================================================
+function elementor_template_shortcode( $atts ) {
+    if ( ! class_exists( '\Elementor\Plugin' ) ) {
+        return '';
+    }
+    $atts = shortcode_atts( array(
+        'id' => '',
+    ), $atts );
+    if ( empty( $atts['id'] ) ) {
+        return '';
+    }
+    return \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $atts['id'] );
+}
+add_shortcode( 'elementor-template', 'elementor_template_shortcode' );
+add_action( 'init', function() {
+    add_filter( 'widget_text', 'do_shortcode' );
+    add_filter( 'widget_text_content', 'do_shortcode' );
+}, 99 );
