@@ -1,0 +1,42 @@
+# Ignore everything by default
+/*
+
+# Except .gitignore itself
+!.gitignore
+!README.md
+
+# Except docker-compose, config and scripts
+!/compose.yaml
+!/custom-php.ini
+!/*.bat
+
+# Except the database initialization folder and its dumps
+!/init-db/
+!/init-db/**
+
+# Except httpdocs directory so we can traverse it
+!/httpdocs/
+
+# Inside httpdocs, ignore all core files and folders
+/httpdocs/*
+
+# Except wp-content
+!/httpdocs/wp-content/
+
+# Inside wp-content, ignore all cache, plugins, uploads, etc.
+/httpdocs/wp-content/*
+
+# Except themes and mu-plugins
+!/httpdocs/wp-content/themes/
+!/httpdocs/wp-content/mu-plugins/
+
+# Inside themes, ignore parent themes
+/httpdocs/wp-content/themes/*
+
+# Except our child theme
+!/httpdocs/wp-content/themes/centroformacionlaguna-child-theme/
+!/httpdocs/wp-content/themes/centroformacionlaguna-child-theme/**
+
+# Inside mu-plugins, keep everything
+!/httpdocs/wp-content/mu-plugins/
+!/httpdocs/wp-content/mu-plugins/**

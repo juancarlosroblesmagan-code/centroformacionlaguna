@@ -1,0 +1,38 @@
+services:
+  wordpress:
+    image: wordpress:latest
+    container_name: centroformacionlaguna-wordpress-1
+    ports:
+      - "8082:80"
+    volumes:
+      - ./httpdocs:/var/www/html
+      - ./custom-php.ini:/usr/local/etc/php/conf.d/zz-custom-php.ini
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wp_laguna
+      WORDPRESS_DB_PASSWORD: "~G0bo$$EtR05mAxPl_laguna"
+      WORDPRESS_DB_NAME: wp_formacionLaguna
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mariadb:10.11
+    container_name: centroformacionlaguna-db-1
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: wp_formacionLaguna
+      MYSQL_USER: wp_laguna
+      MYSQL_PASSWORD: "~G0bo$$EtR05mAxPl_laguna"
+      MYSQL_ROOT_PASSWORD: "root_password_laguna"
+    volumes:
+      - db_data_laguna:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data_laguna:

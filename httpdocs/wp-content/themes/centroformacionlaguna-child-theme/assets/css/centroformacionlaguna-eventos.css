@@ -1,0 +1,369 @@
+/**
+ * Landing Eventos Centro Formacion Laguna — diseño destacado.
+ */
+
+.centroformacionlaguna-eventos {
+	max-width: 1100px;
+	padding-bottom: 4rem;
+}
+
+/* Hero */
+.centroformacionlaguna-eventos-hero {
+	position: relative;
+	margin: 0 -1rem 2.5rem;
+	padding: 3rem 1.5rem 2.5rem;
+	border-radius: 0 0 24px 24px;
+	overflow: hidden;
+	color: #fff;
+	background: linear-gradient(135deg, #5c1010 0%, #8b1a1a 45%, #a83232 100%);
+	box-shadow: 0 20px 60px rgba(139, 26, 26, 0.25);
+}
+
+.centroformacionlaguna-eventos-hero__glow {
+	position: absolute;
+	inset: -40% -20% auto auto;
+	width: 70%;
+	height: 140%;
+	background: radial-gradient(circle, rgba(255, 182, 6, 0.35) 0%, transparent 65%);
+	pointer-events: none;
+	animation: centroformacionlaguna-eventos-pulse 8s ease-in-out infinite;
+}
+
+@keyframes centroformacionlaguna-eventos-pulse {
+	0%,
+	100% {
+		transform: translate(0, 0) scale(1);
+		opacity: 0.7;
+	}
+	50% {
+		transform: translate(-8%, 5%) scale(1.08);
+		opacity: 1;
+	}
+}
+
+.centroformacionlaguna-eventos-kicker {
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	font-size: 0.8rem;
+	color: rgba(255, 255, 255, 0.85);
+	margin-bottom: 0.75rem;
+}
+
+.centroformacionlaguna-eventos-hero h1 {
+	color: #fff;
+	font-size: clamp(1.85rem, 4.5vw, 2.75rem);
+	line-height: 1.15;
+	margin-bottom: 1rem;
+	max-width: 18ch;
+}
+
+.centroformacionlaguna-eventos-lead {
+	color: rgba(255, 255, 255, 0.92);
+	max-width: 52ch;
+	margin-bottom: 1.5rem;
+}
+
+.centroformacionlaguna-eventos-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-bottom: 2rem;
+}
+
+.centroformacionlaguna-eventos-hero .centroformacionlaguna-cta--ghost {
+	border-color: rgba(255, 255, 255, 0.9);
+	color: #fff !important;
+}
+
+.centroformacionlaguna-eventos-hero .centroformacionlaguna-cta--ghost:hover {
+	background: #fff;
+	color: #8b1a1a !important;
+}
+
+.centroformacionlaguna-eventos-stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 2rem;
+	list-style: none;
+	margin: 0;
+	padding: 1.25rem 0 0;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.centroformacionlaguna-eventos-stats li {
+	font-size: 0.95rem;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.centroformacionlaguna-eventos-stats strong {
+	display: block;
+	font-size: 1.35rem;
+	color: #ffb606;
+}
+
+/* Filtros */
+.centroformacionlaguna-eventos-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-bottom: 2rem;
+	position: sticky;
+	top: 80px;
+	z-index: 5;
+	padding: 0.5rem 0;
+	background: linear-gradient(to bottom, #fff 70%, transparent);
+}
+
+.centroformacionlaguna-eventos-filters button {
+	border: 2px solid #e8e8e8;
+	background: #fff;
+	color: #444;
+	padding: 0.5rem 1.1rem;
+	border-radius: 999px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.centroformacionlaguna-eventos-filters button:hover,
+.centroformacionlaguna-eventos-filters button.is-active {
+	border-color: #8b1a1a;
+	background: #8b1a1a;
+	color: #fff;
+}
+
+/* Grid eventos */
+.centroformacionlaguna-eventos-grid-wrap h2 {
+	color: #8b1a1a;
+	font-size: 1.75rem;
+	margin-bottom: 0.5rem;
+}
+
+.centroformacionlaguna-eventos-grid-intro {
+	color: #666;
+	margin-bottom: 1.5rem;
+	max-width: 60ch;
+}
+
+.centroformacionlaguna-eventos-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1.5rem;
+}
+
+.centroformacionlaguna-event-card {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 16px;
+	padding: 1.35rem 1.35rem 1.25rem;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.centroformacionlaguna-event-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 16px 40px rgba(139, 26, 26, 0.12);
+}
+
+.centroformacionlaguna-event-card.is-hidden {
+	display: none;
+}
+
+.centroformacionlaguna-event-card__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 0.75rem;
+}
+
+.centroformacionlaguna-event-card__emoji {
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.centroformacionlaguna-event-card__tag {
+	font-size: 0.72rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	background: #fff8e6;
+	color: #8b1a1a;
+	padding: 0.25rem 0.6rem;
+	border-radius: 4px;
+	font-weight: 700;
+}
+
+.centroformacionlaguna-event-card time {
+	font-size: 0.85rem;
+	color: #888;
+	font-weight: 600;
+}
+
+.centroformacionlaguna-event-card h3 {
+	color: #222;
+	font-size: 1.15rem;
+	line-height: 1.35;
+	margin: 0.35rem 0 0.5rem;
+}
+
+.centroformacionlaguna-event-card__loc {
+	font-size: 0.9rem;
+	color: #8b1a1a;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.centroformacionlaguna-event-card p {
+	margin: 0 0 0.75rem;
+	line-height: 1.65;
+	color: #555;
+	flex-grow: 1;
+}
+
+.centroformacionlaguna-event-card__more {
+	margin: 0 0 1rem;
+	font-size: 0.9rem;
+}
+
+.centroformacionlaguna-event-card__more summary {
+	cursor: pointer;
+	color: #8b1a1a;
+	font-weight: 600;
+}
+
+.centroformacionlaguna-event-card__cta {
+	display: inline-block;
+	align-self: flex-start;
+	padding: 0.6rem 1.25rem;
+	background: #8b1a1a;
+	color: #fff !important;
+	text-decoration: none !important;
+	font-weight: 600;
+	border-radius: 999px;
+	transition: background 0.2s ease;
+}
+
+.centroformacionlaguna-event-card__cta:hover {
+	background: #5c1010;
+}
+
+/* Tipos */
+.centroformacionlaguna-eventos-types {
+	margin: 3.5rem 0;
+}
+
+.centroformacionlaguna-eventos-types h2 {
+	color: #8b1a1a;
+	margin-bottom: 1.25rem;
+}
+
+.centroformacionlaguna-eventos-types__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: 1rem;
+}
+
+.centroformacionlaguna-eventos-type-card {
+	background: linear-gradient(160deg, #fafafa 0%, #f3f3f3 100%);
+	border-radius: 12px;
+	padding: 1.25rem;
+	border-left: 4px solid #ffb606;
+}
+
+.centroformacionlaguna-eventos-type-card h3 {
+	margin: 0 0 0.5rem;
+	font-size: 1.05rem;
+	color: #333;
+}
+
+.centroformacionlaguna-eventos-type-card p {
+	margin: 0;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: #555;
+}
+
+/* Humor section */
+.centroformacionlaguna-eventos-fun {
+	background: #1a1a1a;
+	color: #eee;
+	border-radius: 16px;
+	padding: 2rem 1.75rem;
+	margin: 3rem 0;
+}
+
+.centroformacionlaguna-eventos-fun h2 {
+	color: #ffb606;
+	margin-top: 0;
+}
+
+.centroformacionlaguna-eventos-fun-list {
+	margin: 0 0 1rem;
+	padding-left: 1.25rem;
+	line-height: 1.8;
+}
+
+.centroformacionlaguna-eventos-fun-list li {
+	margin-bottom: 0.35rem;
+}
+
+.centroformacionlaguna-eventos-fun-note {
+	margin: 0;
+	color: #ccc;
+}
+
+/* FAQ */
+.centroformacionlaguna-eventos-faq {
+	margin: 2.5rem 0;
+}
+
+.centroformacionlaguna-eventos-faq h2 {
+	color: #8b1a1a;
+	margin-bottom: 1rem;
+}
+
+.centroformacionlaguna-eventos-faq details {
+	border: 1px solid #eee;
+	border-radius: 8px;
+	padding: 0.85rem 1rem;
+	margin-bottom: 0.75rem;
+	background: #fafafa;
+}
+
+.centroformacionlaguna-eventos-faq summary {
+	cursor: pointer;
+	font-weight: 600;
+	color: #333;
+}
+
+.centroformacionlaguna-eventos-faq p {
+	margin: 0.75rem 0 0;
+	line-height: 1.65;
+	color: #555;
+}
+
+/* CTA final */
+.centroformacionlaguna-eventos-cta.centroformacionlaguna-landing-cta-block {
+	margin-top: 2rem;
+}
+
+.centroformacionlaguna-eventos-cta .centroformacionlaguna-cta {
+	margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.centroformacionlaguna-eventos-hero {
+		margin-left: -0.5rem;
+		margin-right: -0.5rem;
+		padding: 2rem 1rem 1.75rem;
+	}
+
+	.centroformacionlaguna-eventos-hero h1 {
+		max-width: none;
+	}
+
+	.centroformacionlaguna-eventos-filters {
+		top: 60px;
+	}
+}

@@ -1,0 +1,18 @@
+# Pegar en WP Rocket → File Optimization → Delay JavaScript → Excluded JavaScript Files
+# Una entrada por línea según la UI del plugin
+
+/jquery/jquery.min.js
+/jquery/jquery-migrate.min.js
+/wp-includes/js/wp-hooks
+learn-press
+learnpress
+thim-main
+thim-scripts
+thim-course-filter
+search-course
+elementor-frontend
+elementor-frontend-modules
+woocommerce
+wc-cart-fragments
+js-cookie
+imagesloaded

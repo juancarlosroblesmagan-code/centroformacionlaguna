@@ -1,0 +1,17 @@
+/**
+ * Landing «Cómo funcionan los cursos subvencionados» — complemento al inline del mu-plugin.
+ */
+
+.centroformacionlaguna-landing-modern .centroformacionlaguna-cta:hover {
+	filter: brightness(0.97);
+}
+
+.centroformacionlaguna-landing-cta-block .centroformacionlaguna-cta:hover {
+	background: #e5a405 !important;
+	border-color: #e5a405 !important;
+}
+
+.centroformacionlaguna-landing-cta-block .centroformacionlaguna-cta--ghost:hover {
+	background: #fff !important;
+	color: #8b1a1a !important;
+}

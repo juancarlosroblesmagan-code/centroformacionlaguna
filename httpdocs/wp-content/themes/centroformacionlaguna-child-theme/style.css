@@ -1,0 +1,1714 @@
+/*
+Theme Name: CentroFormacionLaguna Child
+Theme URI:    https://www.centroformacionlaguna.net
+Description:  Child Theme de Eduma para Centro Formacion Laguna - Centro de Educación Polivalente
+Author:       Juan Carlos Robles Magán
+Author URI:   http://roblesmagan.com/
+Template:     eduma
+Version:      1.3.1
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  centroformacionlaguna-child
+Tags: education, e-learning, courses
+*/
+
+/* ============================================================
+   CENTROFORMACIONLAGUNA BRAND COLORS - VARIABLES CSS
+   ============================================================ */
+:root {
+    --color-primary:        #022157;   /* Granate principal */
+    --color-primary-dark:   #01163b;   /* Granate oscuro hover */
+    --color-primary-light:  #033385;   /* Granate claro */
+    --color-secondary:      #ffa001;   /* Dorado/Naranja corporativo */
+    --color-secondary-dark: #d68600;   /* Dorado oscuro hover */
+    --color-secondary-light:#ffb833;   /* Dorado claro */
+    --color-accent:         #C0392B;   /* Rojo acento */
+    --color-text:           #2C2C2C;   /* Texto principal */
+    --color-text-light:     #666666;   /* Texto secundario */
+    --color-bg:             #FFFFFF;   /* Fondo principal */
+    --color-bg-light:       #F8F5F0;   /* Fondo suave cálido */
+    --color-bg-dark:        #1A0A0A;   /* Fondo oscuro footer */
+    --color-border:         #E8DDD0;   /* Bordes suaves */
+
+    --font-heading:         'Merriweather', Georgia, serif;
+    --font-body:            'Source Sans Pro', 'Open Sans', Arial, sans-serif;
+
+    --radius:               6px;
+    --shadow-sm:            0 2px 8px rgba(2,33,87,0.1);
+    --shadow-md:            0 4px 20px rgba(2,33,87,0.15);
+    --shadow-lg:            0 8px 40px rgba(2,33,87,0.2);
+
+    --transition:           all 0.3s ease;
+}
+
+/* ============================================================
+   TIPOGRAFÍA
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+/* ============================================================
+   BOTONES — COLOR PRIMARIO
+   ============================================================ */
+.btn,
+button,
+input[type="submit"],
+input[type="button"],
+.button,
+a.btn,
+.thim-btn,
+.lp-button,
+a.lp-button {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #fff !important;
+    border-radius: var(--radius) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px;
+    transition: var(--transition) !important;
+}
+
+.btn:hover,
+button:hover,
+input[type="submit"]:hover,
+.button:hover,
+a.btn:hover,
+.thim-btn:hover,
+.lp-button:hover,
+a.lp-button:hover {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Botones secundarios/outline */
+.btn-outline,
+.button-outline {
+    background-color: transparent !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   HEADER / NAVEGACIÓN
+   ============================================================ */
+#header,
+.site-header,
+header.header,
+.thim-header {
+    background-color: var(--color-bg) !important;
+    border-bottom: 3px solid var(--color-secondary) !important;
+    box-shadow: 0 2px 15px rgba(2,33,87,0.08) !important;
+}
+
+/* Menú de navegación - enlaces */
+#header .nav > li > a,
+.site-header .nav > li > a,
+header nav ul li a,
+.main-navigation a,
+.thim-header .nav > li > a {
+    color: var(--color-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    transition: var(--transition) !important;
+}
+
+#header .nav > li > a:hover,
+.site-header .nav > li > a:hover,
+header nav ul li a:hover,
+.main-navigation a:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* Menú activo */
+#header .nav > li.current-menu-item > a,
+#header .nav > li.active > a {
+    color: var(--color-secondary) !important;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+/* Submenú dropdown */
+#header .nav .sub-menu,
+.main-navigation .sub-menu {
+    border-top: 3px solid var(--color-primary) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+#header .nav .sub-menu a,
+.main-navigation .sub-menu a {
+    color: var(--color-text) !important;
+}
+
+#header .nav .sub-menu a:hover,
+.main-navigation .sub-menu a:hover {
+    color: var(--color-primary) !important;
+    background-color: var(--color-bg-light) !important;
+}
+
+/* ============================================================
+   TOPBAR (barra superior)
+   ============================================================ */
+.topbar,
+#topbar,
+.thim-topbar {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+.topbar a,
+#topbar a,
+.thim-topbar a {
+    color: #fff !important;
+}
+
+.topbar a:hover,
+.thim-topbar a:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   HERO / REVOLUTION SLIDER
+   ============================================================ */
+.rev_slider_wrapper,
+.tp-banner-container {
+    border-bottom: 4px solid var(--color-secondary);
+}
+
+/* Overlay en slides */
+.tp-caption a,
+.tp-caption .btn,
+.rev_slider .tp-caption a {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+/* ============================================================
+   SECCIÓN DE PLANES / CURSOS
+   ============================================================ */
+.section-plans,
+.thim-sc-courses,
+.lp-archive-courses {
+    background-color: var(--color-bg-light);
+}
+
+/* Tarjetas de cursos */
+.course-item,
+.item-course,
+.lp-course-item,
+.learnpress-courses .course {
+    border-radius: var(--radius) !important;
+    border: 1px solid var(--color-border) !important;
+    transition: var(--transition) !important;
+    overflow: hidden;
+}
+
+.course-item:hover,
+.item-course:hover,
+.lp-course-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border-color: var(--color-secondary) !important;
+}
+
+/* Precio de curso */
+.course-price,
+.lp-course-price,
+.price {
+    color: var(--color-primary) !important;
+    font-weight: 700 !important;
+}
+
+/* Badge GRATIS */
+.course-free,
+.free-badge,
+span.free {
+    background-color: var(--color-secondary) !important;
+    color: #fff !important;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   SECCIÓN "POR QUÉ ELEGIRNOS" / ICONOS
+   ============================================================ */
+.why-choose-us .icon,
+.thim-sc-icon-box .icon,
+.elementor-icon,
+.icon-box .icon {
+    color: var(--color-primary) !important;
+}
+
+.thim-sc-icon-box:hover .icon,
+.icon-box:hover .icon {
+    color: var(--color-secondary) !important;
+}
+
+.thim-sc-icon-box h3,
+.icon-box h3 {
+    color: var(--color-primary) !important;
+}
+
+/* ============================================================
+   SECCIÓN REGISTRO / NEWSLETTER
+   ============================================================ */
+.section-register,
+.newsletter-section,
+.thim-sc-register {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+.section-register h2,
+.section-register h3,
+.newsletter-section h2,
+.thim-sc-register h2 {
+    color: #fff !important;
+}
+
+/* Input de email en newsletter */
+.newsletter-section input[type="email"],
+.newsletter-section input[type="text"],
+.mc4wp-form input[type="email"] {
+    border: 2px solid var(--color-secondary) !important;
+    border-radius: var(--radius) !important;
+    padding: 12px 16px !important;
+}
+
+.newsletter-section input[type="submit"],
+.mc4wp-form input[type="submit"] {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   SECCIÓN DE TESTIMONIOS
+   ============================================================ */
+.testimonials-section,
+.thim-sc-testimonials {
+    background-color: var(--color-bg-light) !important;
+}
+
+.testimonial-item .quote-icon,
+.testimonials .quote {
+    color: var(--color-secondary) !important;
+}
+
+.testimonial-item .author-name,
+.testimonials .name {
+    color: var(--color-primary) !important;
+    font-weight: 700;
+}
+
+/* Estrellas de valoración */
+.star-rating span::before,
+.ratings .star::before {
+    color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   BLOG - ENTRADAS
+   ============================================================ */
+.post-title a,
+.entry-title a,
+h2.entry-title a {
+    color: var(--color-primary) !important;
+    transition: var(--transition);
+}
+
+.post-title a:hover,
+.entry-title a:hover {
+    color: var(--color-secondary) !important;
+}
+
+.category-label,
+.post-categories a {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    border-radius: 4px;
+    padding: 2px 8px;
+}
+
+.read-more a,
+a.more-link {
+    color: var(--color-primary) !important;
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.read-more a:hover,
+a.more-link:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   BREADCRUMBS
+   ============================================================ */
+.breadcrumbs,
+.breadcrumb {
+    background-color: var(--color-bg-light) !important;
+    border-bottom: 2px solid var(--color-border);
+}
+
+.breadcrumbs a,
+.breadcrumb a {
+    color: var(--color-primary) !important;
+}
+
+.breadcrumbs .current,
+.breadcrumb .active {
+    color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   PAGINACIÓN
+   ============================================================ */
+.pagination .current,
+.page-numbers.current {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+.pagination a,
+.page-numbers a {
+    color: var(--color-primary) !important;
+    border-color: var(--color-border) !important;
+}
+
+.pagination a:hover,
+.page-numbers a:hover {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+#footer,
+.site-footer,
+footer.footer,
+.thim-footer {
+    background-color: var(--color-bg-dark) !important;
+    color: #ccc !important;
+    border-top: 4px solid var(--color-secondary) !important;
+}
+
+#footer h3,
+#footer h4,
+.site-footer h3,
+.site-footer h4,
+.thim-footer h3,
+.thim-footer .widget-title {
+    color: var(--color-secondary) !important;
+    font-family: var(--font-heading) !important;
+    border-bottom: 1px solid rgba(212,136,10,0.3);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+}
+
+#footer a,
+.site-footer a,
+.thim-footer a {
+    color: #bbb !important;
+    transition: var(--transition);
+}
+
+#footer a:hover,
+.site-footer a:hover,
+.thim-footer a:hover {
+    color: var(--color-secondary) !important;
+}
+
+/* Footer bottom bar */
+.footer-bottom,
+.copyright-bar,
+#footer .bottom {
+    background-color: #0D0505 !important;
+    border-top: 1px solid rgba(212,136,10,0.2) !important;
+    color: #999 !important;
+}
+
+.footer-bottom a {
+    color: var(--color-secondary) !important;
+}
+
+/* Iconos RRSS */
+.social-icons a,
+.social-links a,
+.thim-social a {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    text-align: center !important;
+    display: inline-block !important;
+    transition: var(--transition) !important;
+}
+
+.social-icons a:hover,
+.social-links a:hover {
+    background-color: var(--color-secondary) !important;
+    transform: translateY(-2px);
+}
+
+/* ============================================================
+   LEARNPRESS — PÁGINA DE CURSO INDIVIDUAL
+   ============================================================ */
+.course-summary,
+.single-course .course-info {
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius) !important;
+}
+
+.course-info .price,
+.single-course .course-price {
+    color: var(--color-primary) !important;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+}
+
+.lp-buy-course,
+.course-enroll-btn,
+.btn-enroll {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    padding: 14px 28px !important;
+    border-radius: var(--radius) !important;
+    width: 100% !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+}
+
+.lp-buy-course:hover,
+.course-enroll-btn:hover {
+    background-color: var(--color-secondary) !important;
+}
+
+/* Tabs del curso */
+.lp-course-nav li a,
+.course-tabs li a {
+    color: var(--color-text) !important;
+    border-bottom: 3px solid transparent;
+}
+
+.lp-course-nav li.active a,
+.lp-course-nav li a:hover,
+.course-tabs li.active a {
+    color: var(--color-primary) !important;
+    border-bottom-color: var(--color-primary) !important;
+}
+
+/* ============================================================
+   SECCIÓN DE PLANES DESTACADOS (Cards de Plan)
+   ============================================================ */
+.plan-card,
+.pricing-table,
+.thim-sc-pricing {
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--radius) !important;
+    transition: var(--transition) !important;
+}
+
+.plan-card:hover,
+.pricing-table:hover {
+    border-color: var(--color-primary) !important;
+    box-shadow: var(--shadow-lg) !important;
+    transform: translateY(-5px);
+}
+
+.plan-card .plan-header,
+.pricing-table .plan-name {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    padding: 20px !important;
+    border-radius: var(--radius) var(--radius) 0 0 !important;
+}
+
+.plan-card.featured,
+.pricing-table.featured {
+    border-color: var(--color-secondary) !important;
+}
+
+.plan-card.featured .plan-header {
+    background-color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   FORMULARIOS — CONTACTO
+   ============================================================ */
+.contact-form input,
+.contact-form textarea,
+.wpcf7 input,
+.wpcf7 textarea,
+.wpcf7 select {
+    border: 2px solid var(--color-border) !important;
+    border-radius: var(--radius) !important;
+    padding: 12px 16px !important;
+    transition: var(--transition) !important;
+    font-family: var(--font-body) !important;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.wpcf7 input:focus,
+.wpcf7 textarea:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(2,33,87,0.1) !important;
+    outline: none !important;
+}
+
+.wpcf7-submit,
+.contact-form [type="submit"] {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+    border: none !important;
+    padding: 14px 32px !important;
+    border-radius: var(--radius) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: var(--transition) !important;
+}
+
+.wpcf7-submit:hover,
+.contact-form [type="submit"]:hover {
+    background-color: var(--color-secondary) !important;
+}
+
+/* ============================================================
+   WIDGETS — BARRA LATERAL
+   ============================================================ */
+.widget-title,
+.widget h3,
+aside .widget h2 {
+    color: var(--color-primary) !important;
+    border-left: 4px solid var(--color-secondary) !important;
+    padding-left: 12px !important;
+    font-family: var(--font-heading) !important;
+}
+
+/* ============================================================
+   SECCIÓN HERO / BANNER INTERIOR DE PÁGINAS
+   ============================================================ */
+.page-header-banner,
+.thim-page-header,
+.inner-page-header {
+    background-color: var(--color-primary) !important;
+    position: relative;
+}
+
+.page-header-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary), var(--color-primary));
+}
+
+.page-header-banner h1,
+.thim-page-header h1 {
+    color: #fff !important;
+    font-family: var(--font-heading) !important;
+}
+
+/* ============================================================
+   ACCESIBILIDAD — FOCUS
+   ============================================================ */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid var(--color-secondary) !important;
+    outline-offset: 2px !important;
+}
+
+/* ============================================================
+   SCROLLBAR PERSONALIZADO (Chrome/Edge)
+   ============================================================ */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+}
+
+/* ============================================================
+   RESPONSIVE — AJUSTES MÓVIL
+   ============================================================ */
+@media (max-width: 768px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+
+    .course-item,
+    .plan-card {
+        margin-bottom: 20px;
+    }
+
+    #header .nav {
+        background-color: var(--color-bg) !important;
+    }
+
+    /* Botón hamburguesa */
+    .navbar-toggle span,
+    .menu-toggle span {
+        background-color: var(--color-primary) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn, button, .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   ANTI-GRAVITY: CORRECCIONES DE MAQUETACIÓN E INICIO
+   ============================================================ */
+
+/* 1. Ocultar Itinerarios Formativos en la home */
+.elementor-element-97858f2 {
+    display: none !important;
+}
+
+
+
+/* 3. Correcciones de la página de Cursos (ancho 100% y centrado) */
+body.tax-product_cat .site-content > .row {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+body.tax-product_cat .site-content #sidebar,
+body.tax-product_cat .site-content .widget-area {
+    display: none !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+body.tax-product_cat .site-content main.site-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    float: none !important;
+}
+
+/* Ajustes de Grid de Cursos (WooCommerce) */
+body.tax-product_cat .product-grid {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    column-gap: 30px !important;
+    row-gap: 40px !important;
+}
+
+@media (max-width: 991px) {
+    body.tax-product_cat .product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body.tax-product_cat .product-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Tarjetas de Cursos Simétricas de Alta Calidad */
+body.tax-product_cat .product-grid .product {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+body.tax-product_cat .product-grid .product .content__product {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: var(--transition) !important;
+    box-sizing: border-box !important;
+}
+
+body.tax-product_cat .product-grid .product .content__product:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--color-secondary) !important;
+}
+
+/* Tipografía de las Tarjetas */
+body.tax-product_cat .product-grid .product .product__title {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    margin-top: 15px !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title a.title {
+    font-family: var(--font-heading) !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: var(--color-primary) !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    margin-bottom: 10px !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title a.title:hover {
+    color: var(--color-secondary) !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title .price {
+    font-family: var(--font-body) !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: var(--color-secondary) !important;
+    margin-bottom: 12px !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title .description {
+    flex-grow: 1 !important;
+    margin-bottom: 20px !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title .description p {
+    font-family: var(--font-body) !important;
+    font-size: 0.9rem !important;
+    color: var(--color-text-light) !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+/* Botones Granate de la Tarjeta */
+body.tax-product_cat .product-grid .product .product__title a.button {
+    font-family: var(--font-body) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    background-color: var(--color-primary) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 12px 24px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    transition: var(--transition) !important;
+}
+
+body.tax-product_cat .product-grid .product .product__title a.button:hover {
+    background-color: var(--color-secondary) !important;
+    color: #ffffff !important;
+    box-shadow: var(--shadow-sm) !important;
+}
+
+/* 4. Correcciones de la página de Curso Individual (ancho 100% y centrado) */
+body.single-product .site-content > .row {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+body.single-product .site-content #sidebar,
+body.single-product .site-content .widget-area {
+    display: none !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+body.single-product .site-content main.site-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    float: none !important;
+}
+
+/* Ocultar precios e importes en la página de curso individual */
+body.single-product .price,
+body.single-product .amount,
+body.single-product .woocommerce-Price-amount,
+body.single-product .course-price {
+    display: none !important;
+}
+
+/* Centrar verticalmente el título de los banners de cabecera en todas las páginas internas y fijar altura a 300px */
+body:not(.home) .top_heading,
+body:not(.home) .top_heading.style_heading_3_out {
+    display: block !important;
+    width: 100% !important;
+    height: 300px !important;
+    min-height: 300px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    position: relative !important;
+}
+
+body:not(.home) .top_heading .top_site_main {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+
+body:not(.home) .top_heading .top_site_main span.overlay-top-header {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+body:not(.home) .top_heading .page-title-wrapper {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+
+body:not(.home) .top_heading .banner-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+
+body:not(.home) .top_heading h1.page-title,
+body:not(.home) .top_heading h2.page-title,
+body:not(.home) .top_heading .page-title {
+    color: #fff !important;
+    text-shadow: 0 4px 28px rgba(0,0,0,.45) !important;
+    font-size: clamp(28px, 4vw, 48px) !important;
+    font-weight: 800 !important;
+    letter-spacing: .3px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+}
+
+/* === Redes Sociales en Compartir (Instagram, TikTok, LinkedIn) === */
+.thim-social-share li .instagram-social a.instagram,
+.thim-social-share li .tiktok-social a.tiktok,
+.thim-social-share li .linkedin-social a.linkedin {
+    background: #ffffff !important;
+    border: 1px solid #eeeeee !important;
+    color: #999999 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s ease !important;
+}
+.thim-social-share li .instagram-social a.instagram:hover {
+    background: #e1306c !important;
+    border-color: #e1306c !important;
+    color: #ffffff !important;
+}
+.thim-social-share li .tiktok-social a.tiktok:hover {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+}
+.thim-social-share li .linkedin-social a.linkedin:hover {
+    background: #0077b5 !important;
+    border-color: #0077b5 !important;
+    color: #ffffff !important;
+}
+
+/* === Ocultar bloque de eventos vacío en el Inicio === */
+body.home .elementor-element-c7360be {
+    display: none !important;
+}
+
+/* === Alinear y bajar las 3 tarjetas de estadísticas (badges) en el Inicio (Desktop Only) === */
+@media (min-width: 1025px) {
+    body.home .elementor-element-1023731 {
+        display: flex !important;
+        align-self: center !important;
+        margin-top: 50px !important; /* Bajarlo para centrarlo verticalmente */
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Evitar desbordamiento horizontal y ocultar estadísticas en móviles/tablets */
+@media (max-width: 1024px) {
+    html {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+        height: auto !important;
+    }
+    
+    body {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: visible !important;
+        height: auto !important;
+        min-height: 100% !important;
+        touch-action: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    #wrapper-container,
+    #page, 
+    #main-content,
+    .content-pusher,
+    .site-content {
+        max-width: 100% !important;
+        /* Use clip to hide horizontal overflow without creating a nested scroll port */
+        overflow-x: clip !important;
+        overflow-y: visible !important;
+        height: auto !important;
+    }
+
+    /* Asegurar que el menú móvil no intercepte gestos ni bloquee toques cuando está cerrado */
+    .mobile-menu-wrapper {
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+    
+    /* Restaurar interacción sólo cuando el menú móvil está abierto */
+    body.mobile-menu-open .mobile-menu-wrapper {
+        pointer-events: auto !important;
+        visibility: visible !important;
+    }
+    
+    html body.home .elementor-element-63b7721,
+    html body.home .elementor-element-1de9e11 {
+        max-width: 100% !important;
+    }
+
+    /* Mostrar las tarjetas de características en móviles */
+    html body.home .elementor-element-1023731 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+        margin-top: 30px !important;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Hacer que la columna del texto de la home ocupe el 100% en móvil */
+    html body.home .elementor-element-c091706 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Stack la sección de registro/contacto en vertical (texto/contador y formulario) */
+    html body.home .elementor-element-13251ef {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 30px !important;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    html body.home .elementor-element-e7657e1,
+    html body.home .elementor-element-ba75f78 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Contact Form 7 - Campos a pantalla completa con espaciado en móviles */
+    html body.home .elementor-element-ba75f78 .wpcf7-form p,
+    html body.home .elementor-element-ba75f78 .wpcf7-form-control-wrap {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    html body.home .elementor-element-ba75f78 .wpcf7-form-control:not([type="checkbox"]):not([type="radio"]) {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        box-sizing: border-box !important;
+        margin-bottom: 15px !important;
+        padding: 12px 16px !important;
+    }
+    html body.home .elementor-element-ba75f78 .wpcf7-submit {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Stack la sección de testimonios en vertical (cabecera/imagen y opinión del alumno) */
+    html body.home .elementor-element-40afa39 {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 30px !important;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    html body.home .elementor-element-f70fa44 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Imagen superior de testimonios a pantalla completa (edge-to-edge) */
+    html body.home .elementor-element-9247b75 {
+        width: calc(100% + 30px) !important;
+        max-width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding: 0 !important;
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+        display: block !important;
+    }
+
+    html body.home .elementor-element-9247b75 img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        border-radius: 0 !important;
+    }
+
+    /* Columna de la opinión del alumno al 100% de ancho */
+    html body.home .elementor-element-5c9ae4e {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Stack la sección "¿Por Qué Elegirnos?" en vertical (imagen arriba, acordeón abajo) */
+    html body.home .elementor-element-838dd52 {
+        display: flex !important;
+        flex-direction: column-reverse !important; /* Imagen arriba, textos abajo */
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 30px !important;
+        padding-inline-start: 15px !important;
+        padding-inline-end: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Columna del acordeón al 100% de ancho */
+    html body.home .elementor-element-f7833b3 {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Columna de la imagen principal a pantalla completa (edge-to-edge) */
+    html body.home .elementor-element-977acbf {
+        width: calc(100% + 30px) !important;
+        max-width: calc(100% + 30px) !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding: 0 !important;
+        flex: 1 1 100% !important;
+        display: block !important;
+    }
+
+    /* Imagen principal a ancho completo */
+    html body.home .elementor-element-977acbf img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        border-radius: 0 !important;
+    }
+
+    /* APILAR ELEMENTOS INTERNOS DEL ACORDEÓN (Texto arriba, imagen abajo) */
+    .e-n-accordion-item div[role="region"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Contenedores hijos de texto/imagen en el acordeón al 100% */
+    .e-n-accordion-item div[role="region"] > .e-con,
+    .e-n-accordion-item div[role="region"] > .elementor-element {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+
+    /* Imagen interior del acordeón a pantalla completa */
+    .e-n-accordion-item div[role="region"] img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 15px auto 0 !important;
+        border-radius: 8px !important;
+    }
+}
+
+
+.e-n-accordion-item-title {
+    padding: 10px 0 !important; /* Reducir padding vertical del título */
+}
+
+.e-n-accordion-item-title-text {
+    font-size: 1.05rem !important;
+    margin: 0 !important;
+}
+
+.e-n-accordion-item[open] .e-n-accordion-item-title {
+    border-bottom: none !important;
+}
+
+.e-n-accordion-item div[role="region"] {
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+    line-height: 1.5 !important;
+}
+
+/* === Quitar bordes y cuadros de los botones de navegación === */
+#header .nav > li,
+#header .nav > li > a,
+.thim-ekits-menu__nav-link,
+.thim-ekits-menu__nav-link.active,
+.menu-item-16477,
+.menu-item-16477 > a,
+.current-menu-item > a,
+.active > a,
+.thim-ekits-menu__nav > li,
+.thim-ekits-menu__nav > li > a {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: transparent !important;
+    border-color: transparent !important;
+}
+
+/* === Centrado vertical y alineación del menú del Header === */
+@media (min-width: 1025px) {
+    #header .tm-table,
+    .site-header .tm-table {
+        display: table !important;
+        width: 100% !important;
+        table-layout: auto !important;
+    }
+
+    #header .tm-table .width-logo,
+    .site-header .tm-table .width-logo {
+        width: auto !important;
+        display: table-cell !important;
+        vertical-align: middle !important;
+        white-space: nowrap !important;
+    }
+
+    #header .tm-table .width-navigation,
+    .site-header .tm-table .width-navigation,
+    #header .width-navigation,
+    .site-header .width-navigation {
+        width: 100% !important;
+        display: table-cell !important;
+        vertical-align: middle !important;
+    }
+
+    .thim-ekits-menu__nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important; /* Align items to the far right */
+        width: 100% !important; /* Stretch menu container to full width of cell */
+        margin-left: auto !important;
+        margin-top: 8px !important; /* Centrarlo visualmente */
+        padding: 0 !important;
+    }
+
+    #header .nav > li,
+    .thim-ekits-menu__nav > li {
+        float: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        vertical-align: middle !important;
+    }
+
+    /* Hide the menu-right CTA (phone/button widget) on desktop to let Contacto be the rightmost element */
+    .thim-ekits-menu__nav > li.menu-right {
+        display: none !important;
+    }
+
+    /* Style Contacto (menu-item-16720) as a highlighted red button on desktop */
+    #header .nav > li.menu-item-16720 > a,
+    .thim-ekits-menu__nav > li.menu-item-16720 > a {
+        background-color: var(--color-primary) !important;
+        color: #ffffff !important;
+        padding: 8px 20px !important;
+        border-radius: 30px !important; /* Redondo / Pill-shaped button */
+        font-weight: 700 !important;
+        transition: all 0.3s ease !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border: none !important;
+        border-bottom: none !important;
+        margin-left: 15px !important; /* Separación con el menú */
+        box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2) !important;
+        text-transform: uppercase !important;
+        font-size: 13px !important;
+    }
+
+    #header .nav > li.menu-item-16720 > a:hover,
+    .thim-ekits-menu__nav > li.menu-item-16720 > a:hover {
+        background-color: var(--color-secondary) !important; /* Dorado en hover */
+        color: #ffffff !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 15px rgba(212, 136, 10, 0.3) !important;
+    }
+
+    /* Remove active border bottom highlight since it is now styled as a button */
+    #header .nav > li.menu-item-16720.current-menu-item > a,
+    #header .nav > li.menu-item-16720.active > a,
+    #header .nav > li.menu-item-16720 > a:hover {
+        border-bottom: none !important;
+        color: #ffffff !important;
+    }
+}
+
+
+/* === Ocultar las imágenes de los cursos en la sección "Últimos Cursos Incorporados" de la Home === */
+html body.home .elementor-element-bc66c40 .product_thumb,
+html body.home .elementor-element-bc66c40 .product-image,
+html body.home .elementor-element-bc66c40 .course-thumbnail,
+html body.home .elementor-element-bc66c40 .thim-course-image,
+html body.home .elementor-element-bc66c40 img.wp-post-image,
+html body.home .elementor-element-bc66c40 .woocommerce-placeholder {
+    display: none !important;
+}
+
+/* Forzar simetría y maquetación de tarjetas sin imagen en "Últimos Cursos Incorporados" */
+html body.home .elementor-element-bc66c40 li.product,
+html body.home .elementor-element-bc66c40 .product-grid .product {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+html body.home .elementor-element-bc66c40 li.product .content__product,
+html body.home .elementor-element-bc66c40 .product-grid .product .content__product {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    min-height: 280px !important; /* Altura mínima uniforme sin imágenes */
+    background: #ffffff !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: 8px !important;
+    padding: 24px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: var(--transition) !important;
+    box-sizing: border-box !important;
+}
+
+html body.home .elementor-element-bc66c40 li.product .content__product:hover,
+html body.home .elementor-element-bc66c40 .product-grid .product .content__product:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: var(--shadow-md) !important;
+    border-color: var(--color-secondary) !important;
+}
+
+html body.home .elementor-element-bc66c40 li.product .product__title,
+html body.home .elementor-element-bc66c40 .product-grid .product .product__title {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    margin-top: 0 !important; /* No necesita margen superior al no haber imagen */
+}
+
+html body.home .elementor-element-bc66c40 li.product .description,
+html body.home .elementor-element-bc66c40 .product-grid .product .description {
+    flex-grow: 1 !important;
+}
+
+/* ============================================================
+   ANTI-GRAVITY: CONTACT PAGE GRID RESPONSIVENESS (FORCE STACK)
+   ============================================================ */
+@media (max-width: 1024px) {
+    /* Add nice side margins/padding to the intro text block to prevent it from touching screen edges */
+    body.page-id-16719 .centroformacionlaguna-contact-intro,
+    body.page-slug-contacto .centroformacionlaguna-contact-intro {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Add nice side margins/padding to the panels grid to separate it from screen edges */
+    body.page-id-16719 .centroformacionlaguna-contact-layout,
+    body.page-slug-contacto .centroformacionlaguna-contact-layout,
+    html body.page-id-16719 .centroformacionlaguna-contact-layout {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+    
+    body.page-id-16719 .centroformacionlaguna-contact-panel--visual,
+    body.page-slug-contacto .centroformacionlaguna-contact-panel--visual {
+        grid-column: 1 / -1 !important;
+        min-height: 280px !important;
+    }
+
+    body.page-id-16719 .centroformacionlaguna-contact-panel--visual img,
+    body.page-slug-contacto .centroformacionlaguna-contact-panel--visual img {
+        min-height: 280px !important;
+        height: auto !important;
+    }
+    
+    body.page-id-16719 .centroformacionlaguna-contact-panel--info,
+    body.page-id-16719 .centroformacionlaguna-contact-panel--form,
+    body.page-slug-contacto .centroformacionlaguna-contact-panel--info,
+    body.page-slug-contacto .centroformacionlaguna-contact-panel--form {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Add nice side margins/padding to bottom CTA section */
+    body.page-id-16719 .centroformacionlaguna-contact-cta,
+    body.page-slug-contacto .centroformacionlaguna-contact-cta {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Add extra side margins/padding specifically to the secondary intro paragraph ("Contacta con...") on mobile */
+    body.page-id-16719 .centroformacionlaguna-contact-lead--secondary,
+    body.page-slug-contacto .centroformacionlaguna-contact-lead--secondary {
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* ============================================================
+   ANTI-GRAVITY: CONTACT FORM 7 RESPONSIVE FULL WIDTH INPUTS
+   ============================================================ */
+.wpcf7-form input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+.wpcf7-form textarea,
+.wpcf7-form select,
+.wpcf7-form-control-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+/* ============================================================
+   ANTI-GRAVITY: FOOTER CREDITS & LINKS CENTERING
+   ============================================================ */
+#footer .centroformacionlaguna-footer-credits,
+.site-footer .centroformacionlaguna-footer-credits,
+#footer .centroformacionlaguna-footer-credits p,
+.site-footer .centroformacionlaguna-footer-credits p,
+.centroformacionlaguna-footer-credits,
+.centroformacionlaguna-footer-credits p {
+    text-align: center !important;
+    justify-content: center !important;
+    display: block !important;
+}
+
+/* Ensure corporate links block is centered as well */
+.cis-enlaces-corporativos,
+.cis-enlaces-corporativos p {
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+/* ============================================================
+   ANTI-GRAVITY: CENTER ALL FOOTER WIDGETS & TEXTS ON MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+    #footer,
+    .site-footer,
+    .site-footer .widget,
+    .site-footer .widget_text,
+    .site-footer .textwidget,
+    .site-footer h3,
+    .site-footer h4,
+    .site-footer p,
+    .site-footer ul,
+    .site-footer li,
+    .site-footer a,
+    .site-footer .centroformacionlaguna-footer-inner,
+    .site-footer .centroformacionlaguna-footer-inner > div {
+        text-align: center !important;
+    }
+
+    /* Center navigation lists in the footer */
+    #footer ul,
+    .site-footer ul {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        list-style-position: inside !important;
+        display: block !important;
+    }
+    
+    #footer li,
+    .site-footer li {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    /* Center heading lines stylishly */
+    #footer h3,
+    #footer h4,
+    .site-footer h3,
+    .site-footer h4,
+    .thim-footer h3,
+    .thim-footer .widget-title {
+        border-bottom: 1px solid rgba(212,136,10,0.3) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: fit-content !important;
+        padding-bottom: 4px !important;
+        text-align: center !important;
+    }
+}
+
+/* ============================================================
+   DETALLES DE CURSO (UBICACIÓN Y FECHAS)
+   ============================================================ */
+.centroformacionlaguna-course-info-boxes {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.centroformacionlaguna-course-info-box {
+    padding: 14px 18px;
+    border-radius: var(--radius);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.centroformacionlaguna-course-info-box strong {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+}
+
+.centroformacionlaguna-course-info-box p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.4;
+}
+
+/* ============================================================
+   PERSONALIZACIÓN HOME HERO (MOCKUP ELEMENTOR)
+   ============================================================ */
+
+/* Hero Container Layout */
+html body.home .elementor-element-1de9e11 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    min-height: 600px !important;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Left Column content */
+html body.home .elementor-element-c091706 {
+    width: 100% !important;
+    max-width: 800px !important;
+    flex: none !important;
+    z-index: 2 !important;
+}
+
+/* Main Heading Style */
+html body.home .elementor-element-283b33f h1 {
+    color: #ffffff !important;
+    font-size: 64px !important;
+    font-weight: 900 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -1px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 20px !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+/* Subtitle Style */
+html body.home .elementor-element-d96f521 p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 35px !important;
+    font-weight: 400 !important;
+    max-width: 600px !important;
+}
+
+/* Row of Features at the bottom on Desktop */
+html body.home .elementor-element-1023731 {
+    width: 100% !important;
+    max-width: 900px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 40px !important;
+    margin-top: 50px !important;
+    flex: none !important;
+    z-index: 2 !important;
+}
+
+/* Features columns */
+html body.home .elementor-element-ed1f6b4,
+html body.home .elementor-element-17a8a0f,
+html body.home .elementor-element-3196994 {
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Features headings */
+html body.home .elementor-element-9b44d64 h2,
+html body.home .elementor-element-0496812 h2,
+html body.home .elementor-element-4a438eb h2 {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Button 1: Explorar programas (Solid Orange/Yellow) */
+html body.home .elementor-element-850d728 a.elementor-button {
+    background-color: #ffa001 !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+    padding: 14px 32px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(255, 160, 1, 0.3) !important;
+    border: none !important;
+}
+html body.home .elementor-element-850d728 a.elementor-button:hover {
+    background-color: #e08c00 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(255, 160, 1, 0.4) !important;
+}
+
+/* Button 2: Conoce más (Outline White) */
+html body.home .elementor-element-c2f467e a.elementor-button {
+    background-color: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 30px !important;
+    padding: 12px 30px !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+}
+html body.home .elementor-element-c2f467e a.elementor-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    html body.home .elementor-element-283b33f h1 {
+        font-size: 42px !important;
+    }
+    html body.home .elementor-element-d96f521 p {
+        font-size: 16px !important;
+    }
+}
