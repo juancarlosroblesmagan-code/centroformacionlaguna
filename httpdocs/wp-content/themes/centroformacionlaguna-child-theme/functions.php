@@ -144,7 +144,7 @@ function centroformacionlaguna_customize_register( $wp_customize ) {
 
     // Color primario (granate)
     $wp_customize->add_setting( 'centroformacionlaguna_color_primary', array(
-        'default'           => '#8B1A1A',
+        'default'           => '#022157',
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ) );
@@ -172,7 +172,7 @@ function centroformacionlaguna_customize_register( $wp_customize ) {
 add_action( 'wp_head', 'centroformacionlaguna_dynamic_css' );
 
 function centroformacionlaguna_dynamic_css() {
-    $primary   = get_theme_mod( 'centroformacionlaguna_color_primary',   '#8B1A1A' );
+    $primary   = get_theme_mod( 'centroformacionlaguna_color_primary',   '#022157' );
     $secondary = get_theme_mod( 'centroformacionlaguna_color_secondary', '#D4880A' );
     ?>
     <style id="centroformacionlaguna-dynamic-css">
@@ -245,7 +245,7 @@ function centroformacionlaguna_dynamic_css() {
                 border: none !important;
                 border-bottom: none !important;
                 margin-left: 15px !important; /* Separación con el menú */
-                box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2) !important;
+                box-shadow: 0 4px 10px rgba(2, 33, 87, 0.2) !important;
                 text-transform: uppercase !important;
                 font-size: 13px !important;
             }
@@ -462,7 +462,7 @@ function centroformacionlaguna_pwa_metadata() {
     <link rel="manifest" href="<?php echo esc_url( home_url( '/manifest.json' ) ); ?>">
 
     <!-- PWA Mobile Configuration (iOS y Android) -->
-    <meta name="theme-color" content="#8B1A1A">
+    <meta name="theme-color" content="#022157">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Centro Formación Laguna">
@@ -741,7 +741,7 @@ function centroformacionlaguna_pwa_install_banner() {
         display: block !important;
         width: 100% !important;
         height: 4px !important;
-        background: linear-gradient(90deg, #8B1A1A 0%, #C0392B 40%, #D4880A 100%) !important;
+        background: linear-gradient(90deg, #022157 0%, #C0392B 40%, #D4880A 100%) !important;
         flex-shrink: 0 !important;
     }
     #pwa-banner-row {
@@ -760,7 +760,7 @@ function centroformacionlaguna_pwa_install_banner() {
         height: 54px !important;
         border-radius: 14px !important;
         overflow: hidden !important;
-        box-shadow: 0 2px 8px rgba(139,26,26,0.25) !important;
+        box-shadow: 0 2px 8px rgba(2, 33, 87,0.25) !important;
     }
     #pwa-banner-icon-wrap img {
         display: block !important;
@@ -774,7 +774,7 @@ function centroformacionlaguna_pwa_install_banner() {
         width: 54px !important;
         height: 54px !important;
         border-radius: 14px !important;
-        background: linear-gradient(135deg, #8B1A1A 0%, #D4880A 100%) !important;
+        background: linear-gradient(135deg, #022157 0%, #D4880A 100%) !important;
         align-items: center !important;
         justify-content: center !important;
         color: #ffffff !important;
@@ -812,7 +812,7 @@ function centroformacionlaguna_pwa_install_banner() {
         align-items: center !important;
         justify-content: center !important;
         flex-shrink: 0 !important;
-        background: linear-gradient(135deg, #8B1A1A 0%, #A52020 100%) !important;
+        background: linear-gradient(135deg, #022157 0%, #01173E 100%) !important;
         color: #ffffff !important;
         border: none !important;
         border-radius: 24px !important;
@@ -821,7 +821,7 @@ function centroformacionlaguna_pwa_install_banner() {
         font-weight: 700 !important;
         cursor: pointer !important;
         white-space: nowrap !important;
-        box-shadow: 0 3px 10px rgba(139,26,26,0.38) !important;
+        box-shadow: 0 3px 10px rgba(2, 33, 87,0.38) !important;
         outline: none !important;
         line-height: 1 !important;
         height: auto !important;
@@ -1259,10 +1259,10 @@ function centroformacionlaguna_display_course_details() {
             margin: 35px 0 !important;
             padding: 24px 28px !important;
             background: linear-gradient(135deg, #FAF7F2 0%, #F5EFE6 100%) !important;
-            border: 1px solid rgba(139, 26, 26, 0.08) !important;
-            border-left: 5px solid #8B1A1A !important;
+            border: 1px solid rgba(2, 33, 87, 0.08) !important;
+            border-left: 5px solid #022157 !important;
             border-radius: 12px !important;
-            box-shadow: 0 10px 30px rgba(139, 26, 26, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+            box-shadow: 0 10px 30px rgba(2, 33, 87, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
             box-sizing: border-box !important;
             width: 100% !important;
             display: block !important;
@@ -1270,8 +1270,8 @@ function centroformacionlaguna_display_course_details() {
         }
         .centroformacionlaguna-course-details-card:hover {
             transform: translateY(-2px) !important;
-            box-shadow: 0 12px 35px rgba(139, 26, 26, 0.08), 0 2px 5px rgba(0, 0, 0, 0.03) !important;
-            border-color: rgba(139, 26, 26, 0.15) !important;
+            box-shadow: 0 12px 35px rgba(2, 33, 87, 0.08), 0 2px 5px rgba(0, 0, 0, 0.03) !important;
+            border-color: rgba(2, 33, 87, 0.15) !important;
         }
         .centroformacionlaguna-course-details-card .detail-row {
             display: flex !important;
@@ -1288,15 +1288,15 @@ function centroformacionlaguna_display_course_details() {
             display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
-            background-color: rgba(139, 26, 26, 0.07) !important;
-            color: #8B1A1A !important;
+            background-color: rgba(2, 33, 87, 0.07) !important;
+            color: #022157 !important;
             margin-right: 16px !important;
             flex-shrink: 0 !important;
             font-size: 18px !important;
             transition: background-color 0.3s ease !important;
         }
         .centroformacionlaguna-course-details-card:hover .detail-icon-wrap {
-            background-color: rgba(139, 26, 26, 0.12) !important;
+            background-color: rgba(2, 33, 87, 0.12) !important;
         }
         .centroformacionlaguna-course-details-card .detail-content {
             flex-grow: 1 !important;
@@ -1306,7 +1306,7 @@ function centroformacionlaguna_display_course_details() {
             font-size: 10px !important;
             text-transform: uppercase !important;
             letter-spacing: 1.5px !important;
-            color: #8B1A1A !important;
+            color: #022157 !important;
             font-weight: 700 !important;
             margin-bottom: 4px !important;
             opacity: 0.85 !important;
