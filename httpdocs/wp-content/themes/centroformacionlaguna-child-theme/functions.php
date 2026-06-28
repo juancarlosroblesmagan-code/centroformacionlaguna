@@ -45,14 +45,6 @@ function centroformacionlaguna_child_enqueue_styles() {
         null
     );
 
-    // FontAwesome 4.7.0 CDN for hero feature badges and classic icons
-    wp_enqueue_style(
-        'font-awesome-4-cdn',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
-        array(),
-        '4.7.0'
-    );
-
     // JS personalizado
     wp_enqueue_script(
         'centroformacionlaguna-custom-js',
@@ -142,14 +134,14 @@ function centroformacionlaguna_customize_register( $wp_customize ) {
         'priority' => 20,
     ) );
 
-    // Color primario (granate)
+    // Color primario (azul)
     $wp_customize->add_setting( 'centroformacionlaguna_color_primary', array(
         'default'           => '#022157',
         'sanitize_callback' => 'sanitize_hex_color',
         'transport'         => 'postMessage',
     ) );
     $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'centroformacionlaguna_color_primary', array(
-        'label'   => __( 'Color Principal (Granate)', 'centroformacionlaguna-child' ),
+        'label'   => __( 'Color Principal (Azul)', 'centroformacionlaguna-child' ),
         'section' => 'centroformacionlaguna_colors_section',
     ) ) );
 
@@ -245,7 +237,7 @@ function centroformacionlaguna_dynamic_css() {
                 border: none !important;
                 border-bottom: none !important;
                 margin-left: 15px !important; /* Separación con el menú */
-                box-shadow: 0 4px 10px rgba(2, 33, 87, 0.2) !important;
+                box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2) !important;
                 text-transform: uppercase !important;
                 font-size: 13px !important;
             }
@@ -760,7 +752,7 @@ function centroformacionlaguna_pwa_install_banner() {
         height: 54px !important;
         border-radius: 14px !important;
         overflow: hidden !important;
-        box-shadow: 0 2px 8px rgba(2, 33, 87,0.25) !important;
+        box-shadow: 0 2px 8px rgba(2, 33, 87, 0.25) !important;
     }
     #pwa-banner-icon-wrap img {
         display: block !important;
@@ -812,7 +804,7 @@ function centroformacionlaguna_pwa_install_banner() {
         align-items: center !important;
         justify-content: center !important;
         flex-shrink: 0 !important;
-        background: linear-gradient(135deg, #022157 0%, #01173E 100%) !important;
+        background: linear-gradient(135deg, #022157 0%, #01163b 100%) !important;
         color: #ffffff !important;
         border: none !important;
         border-radius: 24px !important;
@@ -821,7 +813,7 @@ function centroformacionlaguna_pwa_install_banner() {
         font-weight: 700 !important;
         cursor: pointer !important;
         white-space: nowrap !important;
-        box-shadow: 0 3px 10px rgba(2, 33, 87,0.38) !important;
+        box-shadow: 0 3px 10px rgba(139,26,26,0.38) !important;
         outline: none !important;
         line-height: 1 !important;
         height: auto !important;
@@ -1406,23 +1398,6 @@ function centroformacionlaguna_display_course_details() {
     echo '</div>';
 }
 
-// ============================================================
-// 12. ELEMENTOR TEMPLATE SHORTCODE (Render by ID)
-// ============================================================
-function elementor_template_shortcode( $atts ) {
-    if ( ! class_exists( '\Elementor\Plugin' ) ) {
-        return '';
-    }
-    $atts = shortcode_atts( array(
-        'id' => '',
-    ), $atts );
-    if ( empty( $atts['id'] ) ) {
-        return '';
-    }
-    return \Elementor\Plugin::instance()->frontend->get_builder_content_for_display( $atts['id'] );
-}
-add_shortcode( 'elementor-template', 'elementor_template_shortcode' );
-add_action( 'init', function() {
-    add_filter( 'widget_text', 'do_shortcode', 99 );
-    add_filter( 'widget_text_content', 'do_shortcode', 99 );
-}, 99 );
+
+
+

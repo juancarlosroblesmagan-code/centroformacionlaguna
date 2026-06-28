@@ -12,19 +12,16 @@ Text Domain:  centroformacionlaguna-child
 Tags: education, e-learning, courses
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-
 /* ============================================================
    CENTROFORMACIONLAGUNA BRAND COLORS - VARIABLES CSS
    ============================================================ */
 :root {
-    --color-primary:        #022157;   /* Granate principal */
-    --color-primary-dark:   #01173E;   /* Granate oscuro hover */
-    --color-primary-light:  #03317F;   /* Granate claro */
-    --color-secondary:      #D4880A;   /* Dorado principal */
-    --color-secondary-dark: #B27208;   /* Dorado oscuro hover */
-    --color-secondary-light:#F5A623;   /* Dorado claro */
+    --color-primary:        #022157;   /* Azul principal */
+    --color-primary-dark:   #01163b;   /* Azul oscuro hover */
+    --color-primary-light:  #033385;   /* Azul claro */
+    --color-secondary:      #D4880A;   /* Naranja/Dorado corporativo */
+    --color-secondary-dark: #b37308;   /* Naranja oscuro hover */
+    --color-secondary-light:#ffb233;   /* Naranja claro */
     --color-accent:         #C0392B;   /* Rojo acento */
     --color-text:           #2C2C2C;   /* Texto principal */
     --color-text-light:     #666666;   /* Texto secundario */
@@ -47,18 +44,7 @@ Tags: education, e-learning, courses
 /* ============================================================
    TIPOGRAFÍA
    ============================================================ */
-
-
-/* ---------- CORRECCIÓN DE ICONOS DE BARRA SUPERIOR (THIM EKITS FONTS PATH FIJO) ---------- */
-@font-face {
-    font-family: 'thim-ekits';
-    src: url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.woff2') format('woff2'),
-         url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.woff') format('woff'),
-         url('/wp-content/plugins/thim-elementor-kit/build/libraries/thim-ekits/fonts/thim-ekits.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     font-family: var(--font-body);
@@ -131,18 +117,6 @@ header.header,
     background-color: var(--color-bg) !important;
     border-bottom: 3px solid var(--color-secondary) !important;
     box-shadow: 0 2px 15px rgba(2,33,87,0.08) !important;
-    padding-top: 2px !important;
-    padding-bottom: 2px !important;
-    min-height: auto !important;
-}
-
-#header .width-logo img,
-.site-header .width-logo img,
-.thim-logo img,
-#header img {
-    max-height: 50px !important;
-    width: auto !important;
-    transition: all 0.3s ease !important;
 }
 
 /* Menú de navegación - enlaces */
@@ -1352,7 +1326,7 @@ body.home .elementor-element-c7360be {
         border: none !important;
         border-bottom: none !important;
         margin-left: 15px !important; /* Separación con el menú */
-        box-shadow: 0 4px 10px rgba(2, 33, 87, 0.2) !important;
+        box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2) !important;
         text-transform: uppercase !important;
         font-size: 13px !important;
     }
@@ -1660,99 +1634,40 @@ html body.home .elementor-element-d96f521 p {
 /* Row of Features at the bottom on Desktop */
 html body.home .elementor-element-1023731 {
     width: 100% !important;
-    max-width: 1000px !important;
+    max-width: 900px !important;
     display: flex !important;
     flex-direction: row !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     align-items: center !important;
-    gap: 24px !important;
-    margin-top: 60px !important;
-    margin-bottom: 20px !important;
+    gap: 40px !important;
+    margin-top: 50px !important;
     flex: none !important;
     z-index: 2 !important;
 }
 
-/* Features columns styled as premium cards */
+/* Features columns */
 html body.home .elementor-element-ed1f6b4,
 html body.home .elementor-element-17a8a0f,
 html body.home .elementor-element-3196994 {
-    flex: 1 1 0px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: rgba(2, 33, 87, 0.85) !important; /* Semi-solid premium corporate granate to prevent color bleeding */
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(212, 136, 10, 0.35) !important; /* Fine gold border */
-    border-radius: 50px !important;
-    padding: 12px 28px !important;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2) !important;
-    transition: all 0.3s ease !important;
-    text-align: center !important;
-    margin: 0 !important; /* Reset staggered offsets */
+    width: auto !important;
+    max-width: none !important;
+    flex: 0 0 auto !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
-html body.home .elementor-element-ed1f6b4:hover,
-html body.home .elementor-element-17a8a0f:hover,
-html body.home .elementor-element-3196994:hover {
-    background: rgba(2, 33, 87, 0.95) !important;
-    border-color: rgba(212, 136, 10, 0.6) !important;
-    transform: translateY(-3px) !important;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
-}
-
-/* Features headings - targeting the actual parent columns */
-html body.home .elementor-element-ed1f6b4 h2,
-html body.home .elementor-element-17a8a0f h2,
-html body.home .elementor-element-3196994 h2 {
+/* Features headings */
+html body.home .elementor-element-9b44d64 h2,
+html body.home .elementor-element-0496812 h2,
+html body.home .elementor-element-4a438eb h2 {
     color: #ffffff !important;
-    font-size: 15px !important; /* Clean, professional text size */
-    font-weight: 700 !important;
-    margin: 0 !important;
-    letter-spacing: 0.8px !important;
-    text-transform: uppercase !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 8px !important;
-    font-family: 'Source Sans Pro', sans-serif !important;
-}
-
-html body.home .elementor-element-ed1f6b4 h2 i,
-html body.home .elementor-element-17a8a0f h2 i,
-html body.home .elementor-element-3196994 h2 i {
     font-size: 18px !important;
-    color: #ffa001 !important;
-    margin-right: 10px !important;
-    vertical-align: middle !important;
+    font-weight: 600 !important;
+    margin: 0 !important;
+    letter-spacing: 0.5px !important;
 }
-
-/* Responsive stacking for bottom features */
-@media (max-width: 991px) {
-    html body.home .elementor-element-1023731 {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 16px !important;
-        margin-top: 40px !important;
-        padding-inline-start: 15px !important;
-        padding-inline-end: 15px !important;
-        box-sizing: border-box !important;
-    }
-    
-    html body.home .elementor-element-ed1f6b4,
-    html body.home .elementor-element-17a8a0f,
-    html body.home .elementor-element-3196994 {
-        flex: none !important;
-        width: 100% !important;
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        border-radius: 30px !important;
-        padding: 10px 20px !important;
-    }
-}
-
 
 /* Button 1: Explorar programas (Solid Orange/Yellow) */
 html body.home .elementor-element-850d728 a.elementor-button {
@@ -1788,26 +1703,7 @@ html body.home .elementor-element-c2f467e a.elementor-button:hover {
     transform: translateY(-2px) !important;
 }
 
-/* Responsive adjustments and Narrow Header overrides */
-@media (min-width: 1025px) {
-    #header .nav > li > a,
-    .site-header .nav > li > a,
-    .thim-ekits-menu__nav > li > a,
-    #header .thim-ekits-menu__nav > li > a {
-        height: 60px !important;
-        line-height: 60px !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
-    
-    #header .nav > li.menu-item-16720 > a,
-    .thim-ekits-menu__nav > li.menu-item-16720 > a {
-        margin-top: 12px !important; /* Centrar el botón de contacto */
-        height: auto !important;
-        line-height: normal !important;
-    }
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
     html body.home .elementor-element-283b33f h1 {
         font-size: 42px !important;
@@ -1816,4 +1712,3 @@ html body.home .elementor-element-c2f467e a.elementor-button:hover {
         font-size: 16px !important;
     }
 }
-
