@@ -117,6 +117,28 @@ header.header,
     background-color: var(--color-bg) !important;
     border-bottom: 3px solid var(--color-secondary) !important;
     box-shadow: 0 2px 15px rgba(2,33,87,0.08) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Hacer la cabecera más estrecha y compacta */
+.site-header .tm-table,
+#header .tm-table {
+    height: 70px !important;
+    min-height: 70px !important;
+}
+
+.site-header .thim-logo,
+#header .thim-logo {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.site-header .thim-logo img,
+#header .thim-logo img {
+    max-height: 55px !important;
+    width: auto !important;
+    transition: var(--transition) !important;
 }
 
 /* Menú de navegación - enlaces */
@@ -131,6 +153,7 @@ header nav ul li a,
     font-size: 14px;
     letter-spacing: 0.3px;
     transition: var(--transition) !important;
+    line-height: 70px !important; /* Alinear verticalmente al centro */
 }
 
 #header .nav > li > a:hover,
