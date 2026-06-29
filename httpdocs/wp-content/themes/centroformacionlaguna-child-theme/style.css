@@ -168,9 +168,9 @@ html body .elementor-element-1023731 {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    justify-content: flex-start !important; /* Alinear a la izquierda para dejar sitio al scroll */
+    justify-content: center !important; /* Centrado horizontal sin mouse */
     align-items: center !important;
-    gap: 35px !important; /* Mayor separación sin cajas de fondo */
+    gap: 50px !important; /* Mayor separación y distribución */
     width: 100% !important;
     max-width: 1200px !important;
     margin: 40px auto 0 auto !important;
@@ -208,26 +208,32 @@ html body .hero-badge-wrapper {
     display: inline-flex !important;
     align-items: center !important;
     text-align: left !important;
-    gap: 12px !important; /* Espacio entre el icono y el texto */
+    gap: 15px !important; /* Espacio generoso entre el icono y el texto */
+    text-decoration: none !important;
 }
 
-/* Iconos de los Badges */
-html body .hero-badge-wrapper i {
-    font-size: 32px !important; /* Icono grande como en la referencia */
-    color: var(--color-secondary) !important; /* Naranja Laguna */
-    line-height: 1 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+/* Iconos SVG de los Badges */
+html body .hero-badge-wrapper svg.badge-icon-svg {
+    width: 32px !important; /* Tamaño del icono grande */
+    height: 32px !important;
+    stroke: var(--color-secondary) !important; /* Naranja Laguna */
+    stroke-width: 2.5px !important;
+    fill: none !important;
+    flex-shrink: 0 !important;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)) !important;
+    transition: transform 0.3s ease !important;
 }
 
-/* Texto de los Badges (en dos líneas y pequeño) */
+/* Texto de los Badges (en dos líneas y ligeramente más grandes) */
 html body .hero-badge-text {
-    font-size: 12px !important; /* Texto pequeño */
+    font-size: 14px !important; /* Ligeramente más grande como se solicitó */
     font-weight: 600 !important;
     line-height: 1.25 !important;
     color: #ffffff !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5) !important;
     display: block !important;
     text-transform: none !important;
+    letter-spacing: 0.3px !important;
 }
 
 html body .elementor-element-ed1f6b4:hover,
@@ -236,74 +242,10 @@ html body .elementor-element-3196994:hover {
     transform: translateY(-2px) !important;
 }
 
-/* Contenedor del icono del mouse "Descubre más" */
-html body .elementor-element-1023731 #descubre_mas_con {
-    flex: 0 1 auto !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-left: auto !important; /* Empuja el mouse al extremo derecho */
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-
-html body .mouse-scroll-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    color: #ffffff !important;
-    cursor: pointer !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-}
-
-html body .mouse-icon-wheel {
-    width: 20px !important;
-    height: 32px !important;
-    border: 2px solid rgba(255, 255, 255, 0.7) !important;
-    border-radius: 12px !important;
-    position: relative !important;
-    margin-bottom: 6px !important;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
-}
-
-html body .mouse-icon-wheel::before {
-    content: '' !important;
-    position: absolute !important;
-    left: 50% !important;
-    top: 5px !important;
-    transform: translateX(-50%) !important;
-    width: 4px !important;
-    height: 7px !important;
-    background-color: var(--color-secondary) !important; /* Rueda en color naranja Laguna */
-    border-radius: 2px !important;
-    animation: mouse-scroll-wheel-anim 1.6s infinite !important;
-}
-
-@keyframes mouse-scroll-wheel-anim {
-    0% { opacity: 1; top: 5px; }
-    50% { opacity: 0.4; top: 12px; }
-    100% { opacity: 0; top: 12px; }
-}
-
-html body .mouse-scroll-text {
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.5px !important;
-    color: rgba(255, 255, 255, 0.7) !important;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
-    white-space: nowrap !important;
-}
-
-html body .mouse-scroll-container:hover .mouse-icon-wheel {
-    border-color: var(--color-secondary) !important;
-}
-
-html body .mouse-scroll-container:hover .mouse-scroll-text {
-    color: #ffffff !important;
+html body .elementor-element-ed1f6b4:hover svg.badge-icon-svg,
+html body .elementor-element-17a8a0f:hover svg.badge-icon-svg,
+html body .elementor-element-3196994:hover svg.badge-icon-svg {
+    transform: scale(1.1) !important;
 }
 
 /* ============================================================
