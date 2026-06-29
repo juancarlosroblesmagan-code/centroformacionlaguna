@@ -168,27 +168,29 @@ html body .elementor-element-1023731 {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    justify-content: center !important; /* Centrado horizontal sin mouse */
+    justify-content: flex-start !important; /* Alinear a la izquierda con el botón amarillo Explorar */
     align-items: center !important;
-    gap: 40px !important; /* Separación equidistante */
+    gap: 45px !important; /* Separación equidistante controlada exclusivamente por gap */
     width: 100% !important;
-    max-width: 1200px !important;
-    margin: 40px auto 0 auto !important;
+    max-width: 100% !important;
+    margin: 40px 0 0 0 !important; /* Alinear a la izquierda */
     padding-bottom: 20px !important;
+    padding-left: 0 !important; /* Evitar paddings izquierdos */
 }
 
 /* Estilo individual para cada contenedor de badge - limpio y plano como Innova */
 html body .elementor-element-ed1f6b4,
 html body .elementor-element-17a8a0f,
 html body .elementor-element-3196994 {
-    flex: 1 1 0px !important; /* Misma proporción exacta de ancho */
-    max-width: 250px !important; /* Limitar el ancho para que estén juntos y equidistantes */
+    flex: 0 0 auto !important; /* Ajuste automático según el contenido */
+    width: auto !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important; /* Centrar internamente */
+    margin: 0 !important;
+    display: inline-flex !important;
+    justify-content: flex-start !important; /* Alinear contenido a la izquierda */
     transition: all 0.3s ease !important;
 }
 
