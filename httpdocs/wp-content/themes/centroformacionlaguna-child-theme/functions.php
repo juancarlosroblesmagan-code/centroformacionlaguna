@@ -222,41 +222,7 @@ function centroformacionlaguna_dynamic_css() {
                 display: none !important;
             }
 
-            /* Style Contacto (menu-item-16720) as a highlighted red button on desktop */
-            #header .nav > li.menu-item-16720 > a,
-            .thim-ekits-menu__nav > li.menu-item-16720 > a {
-                background-color: var(--color-primary) !important;
-                color: #ffffff !important;
-                padding: 8px 20px !important;
-                border-radius: 30px !important; /* Redondo / Pill-shaped button */
-                font-weight: 700 !important;
-                transition: all 0.3s ease !important;
-                display: inline-flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                border: none !important;
-                border-bottom: none !important;
-                margin-left: 15px !important; /* Separación con el menú */
-                box-shadow: 0 4px 10px rgba(139, 26, 26, 0.2) !important;
-                text-transform: uppercase !important;
-                font-size: 13px !important;
-            }
-
-            #header .nav > li.menu-item-16720 > a:hover,
-            .thim-ekits-menu__nav > li.menu-item-16720 > a:hover {
-                background-color: var(--color-secondary) !important; /* Dorado en hover */
-                color: #ffffff !important;
-                transform: translateY(-2px) !important;
-                box-shadow: 0 6px 15px rgba(212, 136, 10, 0.3) !important;
-            }
-
-            /* Remove active border bottom highlight since it is now styled as a button */
-            #header .nav > li.menu-item-16720.current-menu-item > a,
-            #header .nav > li.menu-item-16720.active > a,
-            #header .nav > li.menu-item-16720 > a:hover {
-                border-bottom: none !important;
-                color: #ffffff !important;
-            }
+            /* Contacto button styling has been moved to style.css to keep styles consolidated and avoid overrides */
         }
     </style>
     <?php

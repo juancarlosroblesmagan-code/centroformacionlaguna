@@ -1507,8 +1507,9 @@ body.home .elementor-element-c7360be {
         justify-content: flex-end !important; /* Align items to the far right */
         width: 100% !important; /* Stretch menu container to full width of cell */
         margin-left: auto !important;
-        margin-top: 8px !important; /* Centrarlo visualmente */
+        margin-top: 0 !important; /* Removido el margen superior para centrado perfecto */
         padding: 0 !important;
+        height: 75px !important;
     }
 
     #header .nav > li,
@@ -1517,6 +1518,7 @@ body.home .elementor-element-c7360be {
         display: inline-flex !important;
         align-items: center !important;
         vertical-align: middle !important;
+        height: 75px !important; /* Aprovechar todo el alto de la cabecera */
     }
 
     /* Hide the menu-right CTA (phone/button widget) on desktop to let Contacto be the rightmost element */
@@ -1541,7 +1543,9 @@ body.home .elementor-element-c7360be {
         margin-left: 15px !important; /* Separación con el menú */
         height: 36px !important; /* Compacto verticalmente */
         line-height: 1.2 !important;
-        margin-top: 19px !important; /* Centrado en cabecera de 75px */
+        margin-top: 0 !important; /* Centrado vertical mediante flexbox */
+        margin-bottom: 0 !important;
+        align-self: center !important;
         box-shadow: 0 4px 12px rgba(212, 136, 10, 0.25) !important;
         text-transform: uppercase !important;
         font-size: 13px !important;
