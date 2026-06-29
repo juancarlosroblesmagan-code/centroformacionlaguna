@@ -173,7 +173,7 @@ html body .elementor-element-1023731 {
     gap: 35px !important; /* Mayor separación sin cajas de fondo */
     width: 100% !important;
     max-width: 1200px !important;
-    margin: 60px auto 0 auto !important;
+    margin: 40px auto 0 auto !important;
     padding-bottom: 20px !important;
 }
 
@@ -197,11 +197,37 @@ html body .elementor-element-4a438eb h2,
 html body .elementor-heading-title {
     color: #ffffff !important;
     font-size: 15px !important;
-    font-weight: 500 !important;
     margin: 0 !important;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6) !important;
-    white-space: nowrap !important;
-    letter-spacing: 0.5px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Contenedor del Wrapper del Badge */
+html body .hero-badge-wrapper {
+    display: inline-flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 12px !important; /* Espacio entre el icono y el texto */
+}
+
+/* Iconos de los Badges */
+html body .hero-badge-wrapper i {
+    font-size: 32px !important; /* Icono grande como en la referencia */
+    color: var(--color-secondary) !important; /* Naranja Laguna */
+    line-height: 1 !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4) !important;
+}
+
+/* Texto de los Badges (en dos líneas y pequeño) */
+html body .hero-badge-text {
+    font-size: 12px !important; /* Texto pequeño */
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    display: block !important;
+    text-transform: none !important;
 }
 
 html body .elementor-element-ed1f6b4:hover,
@@ -283,6 +309,48 @@ html body .mouse-scroll-container:hover .mouse-scroll-text {
 /* ============================================================
    BANNER HERO ESTILO INNOVA
    ============================================================ */
+@media (min-width: 1025px) {
+    /* Ajustar la altura de la sección Hero para que encaje exactamente en una pantalla sin scroll */
+    html body .elementor-element-63b7721 {
+        height: calc(100vh - 115px) !important;
+        min-height: calc(100vh - 115px) !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Forzar al contenedor interno a expandirse y organizarse en flexbox */
+    html body .elementor-element-1de9e11 {
+        width: 100% !important;
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+
+    /* Reducir márgenes internos para mayor compactación */
+    html body .elementor-element-c091706 {
+        margin-bottom: 10px !important;
+    }
+    
+    html body .elementor-element-283b33f .elementor-heading-title {
+        font-size: 50px !important; /* Ligeramente más compacto */
+        margin-bottom: 15px !important;
+    }
+    
+    html body .elementor-element-63b7721 p.e-paragraph-base {
+        margin-bottom: 25px !important;
+    }
+    
+    html body .elementor-element-1023731 {
+        margin-top: 30px !important; /* Espacio más estrecho de separación */
+    }
+}
+
 /* Título H1 en tres líneas */
 html body .elementor-element-283b33f .elementor-heading-title {
     font-size: 58px !important;
