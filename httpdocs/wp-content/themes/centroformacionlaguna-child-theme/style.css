@@ -164,86 +164,157 @@ header nav ul li a:hover,
 }
 
 /* Badges de la sección Hero (Certificados, 100% Subvencionados, Inserción Laboral) */
-.elementor-element-1023731 {
+html body .elementor-element-1023731 {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
-    justify-content: center !important;
+    justify-content: flex-start !important; /* Alinear a la izquierda para dejar sitio al scroll */
+    align-items: center !important;
     gap: 35px !important; /* Mayor separación sin cajas de fondo */
     width: 100% !important;
     max-width: 1200px !important;
-    margin: 40px auto 0 auto !important;
+    margin: 60px auto 0 auto !important;
+    padding-bottom: 20px !important;
 }
 
 /* Estilo individual para cada contenedor de badge - limpio y plano como Innova */
-.elementor-element-ed1f6b4,
-.elementor-element-17a8a0f,
-.elementor-element-3196994 {
+html body .elementor-element-ed1f6b4,
+html body .elementor-element-17a8a0f,
+html body .elementor-element-3196994 {
     flex: 0 1 auto !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
-    text-align: center !important;
+    text-align: left !important;
     transition: all 0.3s ease !important;
 }
 
 /* Ajustar los títulos (headings) dentro de los badges */
-.elementor-element-9b44d64 h2,
-.elementor-element-0496812 h2,
-.elementor-element-4a438eb h2,
-.elementor-element-9b44d64 .elementor-heading-title,
-.elementor-element-0496812 .elementor-heading-title,
-.elementor-element-4a438eb .elementor-heading-title {
+html body .elementor-element-9b44d64 h2,
+html body .elementor-element-0496812 h2,
+html body .elementor-element-4a438eb h2,
+html body .elementor-heading-title {
     color: #ffffff !important;
-    font-size: 16px !important;
-    font-weight: 600 !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
     margin: 0 !important;
     text-shadow: 0 2px 4px rgba(0,0,0,0.6) !important;
     white-space: nowrap !important;
     letter-spacing: 0.5px !important;
 }
 
-.elementor-element-ed1f6b4:hover,
-.elementor-element-17a8a0f:hover,
-.elementor-element-3196994:hover {
+html body .elementor-element-ed1f6b4:hover,
+html body .elementor-element-17a8a0f:hover,
+html body .elementor-element-3196994:hover {
     transform: translateY(-2px) !important;
+}
+
+/* Contenedor del icono del mouse "Descubre más" */
+html body .elementor-element-1023731 #descubre_mas_con {
+    flex: 0 1 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important; /* Empuja el mouse al extremo derecho */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+html body .mouse-scroll-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+}
+
+html body .mouse-icon-wheel {
+    width: 20px !important;
+    height: 32px !important;
+    border: 2px solid rgba(255, 255, 255, 0.7) !important;
+    border-radius: 12px !important;
+    position: relative !important;
+    margin-bottom: 6px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+html body .mouse-icon-wheel::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 5px !important;
+    transform: translateX(-50%) !important;
+    width: 4px !important;
+    height: 7px !important;
+    background-color: var(--color-secondary) !important; /* Rueda en color naranja Laguna */
+    border-radius: 2px !important;
+    animation: mouse-scroll-wheel-anim 1.6s infinite !important;
+}
+
+@keyframes mouse-scroll-wheel-anim {
+    0% { opacity: 1; top: 5px; }
+    50% { opacity: 0.4; top: 12px; }
+    100% { opacity: 0; top: 12px; }
+}
+
+html body .mouse-scroll-text {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+    white-space: nowrap !important;
+}
+
+html body .mouse-scroll-container:hover .mouse-icon-wheel {
+    border-color: var(--color-secondary) !important;
+}
+
+html body .mouse-scroll-container:hover .mouse-scroll-text {
+    color: #ffffff !important;
 }
 
 /* ============================================================
    BANNER HERO ESTILO INNOVA
    ============================================================ */
 /* Título H1 en tres líneas */
-.elementor-element-283b33f .elementor-heading-title {
+html body .elementor-element-283b33f .elementor-heading-title {
     font-size: 58px !important;
     font-weight: 800 !important;
     line-height: 1.1 !important;
     letter-spacing: 1px !important;
     text-transform: uppercase !important;
     color: #ffffff !important;
-    margin-bottom: 25px !important;
+    margin-bottom: 20px !important;
     text-shadow: 0 2px 10px rgba(0,0,0,0.4) !important;
 }
 
 /* Línea acentuada en naranja */
-.elementor-element-283b33f .elementor-heading-title .accent {
+html body .elementor-element-283b33f .elementor-heading-title .accent {
     color: var(--color-secondary) !important; /* Naranja/Ambar Laguna */
 }
 
-/* Subtítulo del Hero estilo Innova (más delgado y legible) */
-.elementor-element-63b7721 .elementor-widget-text-editor,
-.elementor-element-63b7721 .elementor-text-editor {
+/* Subtítulo del Hero estilo Innova (e-paragraph widget d96f521) */
+html body .elementor-element-63b7721 .elementor-widget-e-paragraph,
+html body .elementor-element-63b7721 p.e-paragraph-base {
     color: #f1f5f9 !important; /* Off-white */
     font-size: 18px !important;
     font-weight: 400 !important;
     line-height: 1.6 !important;
     max-width: 650px !important;
-    margin: 0 auto 35px auto !important;
+    margin: 0 0 35px 0 !important;
     text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+    text-align: left !important;
 }
 
 /* Botón Explorar Programas (Hero) */
-.elementor-element-f78e47b .elementor-button {
+html body .elementor-element-f78e47b .elementor-button {
     background-color: var(--color-secondary) !important; /* Orange/Amber */
     color: #ffffff !important;
     border-radius: 30px !important;
@@ -256,14 +327,14 @@ header nav ul li a:hover,
     transition: all 0.3s ease !important;
 }
 
-.elementor-element-f78e47b .elementor-button:hover {
+html body .elementor-element-f78e47b .elementor-button:hover {
     background-color: var(--color-primary) !important; /* Dark Blue */
     box-shadow: 0 6px 20px rgba(2, 33, 87, 0.4) !important;
     transform: translateY(-2px) !important;
 }
 
 /* Botón Conoce más (Hero) */
-.elementor-element-c2f467e .elementor-button {
+html body .elementor-element-c2f467e .elementor-button {
     background-color: transparent !important;
     color: #ffffff !important;
     border: 2px solid #ffffff !important;
@@ -276,7 +347,7 @@ header nav ul li a:hover,
     transition: all 0.3s ease !important;
 }
 
-.elementor-element-c2f467e .elementor-button:hover {
+html body .elementor-element-c2f467e .elementor-button:hover {
     background-color: #ffffff !important;
     color: var(--color-primary) !important; /* Dark Blue */
     transform: translateY(-2px) !important;
