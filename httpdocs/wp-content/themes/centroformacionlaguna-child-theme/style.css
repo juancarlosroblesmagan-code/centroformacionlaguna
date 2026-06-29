@@ -124,19 +124,19 @@ header.header,
 /* Hacer la cabecera más estrecha y compacta */
 .site-header .tm-table,
 #header .tm-table {
-    height: 80px !important;
-    min-height: 80px !important;
+    height: 70px !important;
+    min-height: 70px !important;
 }
 
 .site-header .thim-logo,
 #header .thim-logo {
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
 
 .site-header .thim-logo img,
 #header .thim-logo img {
-    max-height: 65px !important;
+    max-height: 60px !important;
     width: auto !important;
     transition: var(--transition) !important;
 }
@@ -153,7 +153,7 @@ header nav ul li a,
     font-size: 14px;
     letter-spacing: 0.3px;
     transition: var(--transition) !important;
-    line-height: 80px !important; /* Alinear verticalmente al centro */
+    line-height: 70px !important; /* Alinear verticalmente al centro */
 }
 
 #header .nav > li > a:hover,
@@ -161,6 +161,56 @@ header nav ul li a,
 header nav ul li a:hover,
 .main-navigation a:hover {
     color: var(--color-secondary) !important;
+}
+
+/* Badges de la sección Hero (Certificados, 100% Subvencionados, Inserción Laboral) */
+.elementor-element-1023731 {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; /* Permitir que bajen en pantallas medianas/pequeñas */
+    justify-content: center !important; /* Centrar los bloques */
+    gap: 20px !important; /* Espacio uniforme entre los bloques */
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 35px auto 0 auto !important;
+}
+
+/* Estilo individual para cada contenedor de badge */
+.elementor-element-ed1f6b4,
+.elementor-element-17a8a0f,
+.elementor-element-3196994 {
+    flex: 1 1 250px !important; /* Flex crecer, encoger, y base de 250px para responder bien */
+    max-width: 300px !important;
+    background: rgba(255, 255, 255, 0.1) !important; /* Fondo sutil translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important; /* Borde sutil */
+    border-radius: 8px !important;
+    padding: 10px 15px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+}
+
+.elementor-element-ed1f6b4:hover,
+.elementor-element-17a8a0f:hover,
+.elementor-element-3196994:hover {
+    transform: translateY(-3px) !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: var(--color-secondary) !important; /* Borde naranja Laguna en hover */
+}
+
+/* Ajustar los títulos (headings) dentro de los badges */
+.elementor-element-9b44d64 h2,
+.elementor-element-0496812 h2,
+.elementor-element-4a438eb h2,
+.elementor-element-9b44d64 .elementor-heading-title,
+.elementor-element-0496812 .elementor-heading-title,
+.elementor-element-4a438eb .elementor-heading-title {
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    margin: 0 !important;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+    white-space: nowrap !important; /* Evitar que se corten palabras */
 }
 
 /* Menú activo */
